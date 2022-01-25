@@ -1,15 +1,8 @@
 {
   "name": "aplicacao",
-  "packageManager": "yarn@3.1.1",
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/sever.js",
-    "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/sever.ts"
-  },
-  "workspaces": [
-    "client"
-  ],
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.13",
@@ -24,5 +17,25 @@
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1",
     "jsonwebtoken": "^8.5.1"
-  }
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/sever.js",
+    "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/sever.ts"
+  },
+  "workspaces": [
+    "client"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabbioSborges/appDelivery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabbioSborges/appDelivery/issues"
+  },
+  "homepage": "https://github.com/fabbioSborges/appDelivery#readme"
 }
