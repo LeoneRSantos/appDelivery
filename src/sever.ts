@@ -18,4 +18,4 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     .json({ status: "erro", message: "Erro interno do Servidor" });
 });
 
-app.listen(3331, () => console.log("Teste"));
+app.listen(process.env.PORT || 3331, () => console.log("Teste"));
