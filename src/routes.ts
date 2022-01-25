@@ -28,15 +28,18 @@ const findaAllDeliveriesController = new FindaAllDeliveriesController();
 const findAllDeliveriesDeliverymanController =
   new FindAllDeliveriesDeliverymanController();
 
-routes.post("/client/", createClientController.handle);
-routes.post("/client/authenticate/", authenticateClientController.handle);
+routes.get("/", (req, res) => {
+  res.json({ message: "olá mundo" });
+});
+routes.post("/client", createClientController.handle);
+routes.post("/client/authenticate", authenticateClientController.handle);
 routes.post(
-  "/deliveryman/authenticate/",
+  "/deliveryman/authenticate",
   authenticateDeliverymanController.handle
 );
-routes.post("/deliveryman/", createClientDeliveryman.handle);
+routes.post("/deliveryman", createClientDeliveryman.handle);
 routes.post(
-  "/delivery/",
+  "/delivery",
   ensureAuthenticateClient,
   createDeliveryController.handle
 );
